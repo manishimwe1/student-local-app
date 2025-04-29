@@ -20,7 +20,7 @@ let userName = "";
 let userLocation = "";
 let userAge = "";
 let clickedStudentId;
-const API_URL = `http://localhost:10000`
+const API_URL = `https://student-local-app.onrender.com`
 
 if (userNameInput && locationInput && ageInput) {
   userNameInput.addEventListener("keyup", (event) => {
