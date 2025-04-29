@@ -68,7 +68,7 @@ function saveUserData() {
 getAllData();
 
 function getAllData() {
-  fetch("http://localhost:3000/", {
+  fetch("http://localhost:3000/api/attendance", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -176,13 +176,16 @@ function deleteIndividualStudent(clickedStudentId) {
   })
 }
 
+
+
+
 if (window.location.href.split("?")[1]) {
   clickedStudentId = window.location.href.split("?")[1];
   console.log(clickedStudentId);
 
   table_list.classList = "hideTable";
   searchBox.classList = "hideTable";
-
+  console.log(window.location.href.split("?")[1]);
   studentData();
   getshowGrade();
 
